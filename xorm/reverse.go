@@ -21,6 +21,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/tal-tech/rigger/config"
 
+	_ "github.com/apache/calcite-avatica-go/v5"
 	_ "github.com/denisenkom/go-mssqldb"
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"

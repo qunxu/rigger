@@ -26,6 +26,12 @@ var NewOdinInfo NewProjectInfo = NewProjectInfo{
 	ReplaceFile:    map[string]string{"odin": ""},
 	ReplaceDir:     map[string]string{"odin": ""},
 }
+var NewHsfInfo NewProjectInfo = NewProjectInfo{
+	TplRepo:        "git@gitlab.alibaba-inc.com:amap-car-lbs/hsfDemoProject.git",
+	ReplaceContent: []ReplaceContentItem{{"hsfDemoProject", DefaultReplaceName}, {"hsfDemoProject", TitleReplaceName}},
+	ReplaceDir:     map[string]string{"hsfDemoProject": ""},
+	ReplaceFile:    map[string]string{"hsfDemoProject.release": ".release"},
+}
 
 var NewGaeaInfo NewProjectInfo = NewProjectInfo{
 	TplRepo:        "https://github.com/tal-tech/gaea.git",

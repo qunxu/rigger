@@ -29,13 +29,15 @@ var TitleName string
 var GitUrl string
 
 var DefaultReplacer *strings.Replacer
+var ProjectNameReplacer *strings.Replacer
 
 func init() {
 	DefaultReplacer = strings.NewReplacer("\t", "", "\r", "", "\n", "", ".", "", "-", "")
+	ProjectNameReplacer = strings.NewReplacer("\t", "", "\r", "", "\n", "", ".", "")
 }
 
 func Filter(msg string) string {
-	replacer := DefaultReplacer
+	replacer := ProjectNameReplacer
 	return replacer.Replace(msg)
 }
 
@@ -52,6 +54,8 @@ func new(c *cobra.Command, args []string) {
 	switch templatename {
 	case "rpc":
 		newProjectInfo = config.NewOdinInfo
+	case "hsf":
+		newProjectInfo = config.NewHsfInfo
 	case "api":
 		newProjectInfo = config.NewGaeaInfo
 	case "async":
@@ -76,7 +80,7 @@ func new(c *cobra.Command, args []string) {
 		}
 
 	default:
-		fmt.Fprintln(os.Stdout, "请使用rigger new templateName(rpc/api/async/proxy/custom) yourServiceName")
+		fmt.Fprintln(os.Stdout, "请使用rigger new templateName(hsf/http) yourServiceName")
 		return
 	}
 
@@ -161,10 +165,10 @@ func replaceContent(serviceName string) error {
 }
 
 func replaceFile(serviceName string) error {
-	for key, _ := range newProjectInfo.ReplaceFile {
+	for key, val := range newProjectInfo.ReplaceFile {
 		arg := `pushd ` + getServiceDir(serviceName) +
-			`&&find . -name '` + key + `.go' |awk -F "` + key + `.go" '{print $1}' |` +
-			`xargs -I'{}' mv {}` + key + `.go {}` + serviceName + `.go&&popd`
+			`&&find . -name '` + key + `' |awk -F "` + key + `" '{print $1}' |` +
+			`xargs -I'{}' mv {}` + key + ` {}` + serviceName + val + `&&popd`
 
 		cmd := osexec.Command("/bin/sh", "-c", arg)
 
@@ -205,9 +209,9 @@ func sedI() string {
 }
 
 func getServiceDir(serviceName string) string {
-	if strings.TrimSpace(os.Getenv("GOPATH")) != "" {
-		return os.Getenv("GOPATH") + "/src/" + serviceName
-	}
+	//if strings.TrimSpace(os.Getenv("GOPATH")) != "" {
+	//	return os.Getenv("GOPATH") + "/src/" + serviceName
+	//}
 	return "./" + serviceName
 }
 
