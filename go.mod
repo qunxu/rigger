@@ -14,4 +14,4 @@ require (
 	github.com/ziutek/mymysql v1.5.4
 )
 
-replace github.com/apache/calcite-avatica-go/v5 v5.0.0 => gitlab.alibaba-inc.com/wuqunxu.wqx/calcite-avatica-go/v5 v5.0.11
+replace github.com/apache/calcite-avatica-go/v5 v5.0.0 => gitlab.alibaba-inc.com/amap-car-lbs/calcite-avatica-go-lindorm/v5 v5.0.29

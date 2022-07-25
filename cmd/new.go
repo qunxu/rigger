@@ -16,7 +16,7 @@ import (
 var New = &cobra.Command{
 	Use:           "new [rpc|api|async|proxy|job|custom] [servicename]",
 	Short:         "根据工程模板创建项目(job会在当前目录下生成)",
-	Long:          "请使用rigger new templateName(rpc/api/async/proxy/job/custom) yourServiceName",
+	Long:          "请使用rigger new templateName(rpc/api/async/proxy/job/custom/hsf) yourServiceName",
 	Run:           new,
 	SilenceUsage:  true,
 	SilenceErrors: true,
