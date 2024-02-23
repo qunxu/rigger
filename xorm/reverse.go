@@ -14,18 +14,17 @@ import (
 	"strconv"
 	"strings"
 	"text/template"
-
-	"github.com/go-xorm/core"
-	"github.com/go-xorm/xorm"
-	"github.com/lunny/log"
-	"github.com/spf13/cobra"
-	"github.com/tal-tech/rigger/config"
+	"xorm.io/xorm/schemas"
 
 	_ "github.com/apache/calcite-avatica-go/v5"
 	_ "github.com/denisenkom/go-mssqldb"
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"
+	"github.com/lunny/log"
+	"github.com/spf13/cobra"
+	"github.com/tal-tech/rigger/config"
 	_ "github.com/ziutek/mymysql/godrv"
+	"xorm.io/xorm"
 )
 
 type Reverse struct {
@@ -67,7 +66,7 @@ func printReversePrompt(flag string) {
 }
 
 type Tmpl struct {
-	Tables  []*core.Table
+	Tables  []*schemas.Table
 	Imports map[string]string
 	Models  string
 }
