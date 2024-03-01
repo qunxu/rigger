@@ -10,7 +10,7 @@ import (
 
 var version bool
 
-const VERSION = "v1.0.5"
+const VERSION = "v1.0.6"
 
 var RootCmd = &cobra.Command{
 	Use: "rigger",
