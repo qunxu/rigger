@@ -6,9 +6,9 @@ import (
 	"os"
 	"strings"
 
+	"github.com/qunxu/rigger/common"
+	"github.com/qunxu/rigger/internal"
 	"github.com/spf13/cobra"
-	"github.com/tal-tech/rigger/common"
-	"github.com/tal-tech/rigger/internal"
 )
 
 var Gens = &cobra.Command{

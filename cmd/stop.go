@@ -7,8 +7,8 @@ import (
 	osexec "os/exec"
 	"strings"
 
+	"github.com/qunxu/rigger/common"
 	"github.com/spf13/cobra"
-	"github.com/tal-tech/rigger/common"
 )
 
 var Stop = &cobra.Command{

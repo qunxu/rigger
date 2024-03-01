@@ -21,8 +21,8 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"
 	"github.com/lunny/log"
+	"github.com/qunxu/rigger/config"
 	"github.com/spf13/cobra"
-	"github.com/tal-tech/rigger/config"
 	_ "github.com/ziutek/mymysql/godrv"
 	"xorm.io/xorm"
 )

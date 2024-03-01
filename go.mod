@@ -1,4 +1,4 @@
-module github.com/tal-tech/rigger
+module github.com/qunxu/rigger
 
 go 1.18
 

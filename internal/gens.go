@@ -9,7 +9,7 @@ import (
 	"go/token"
 	"strings"
 
-	"github.com/tal-tech/rigger/common"
+	"github.com/qunxu/rigger/common"
 )
 
 type Imports struct {

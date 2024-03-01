@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/qunxu/rigger/common"
 	"github.com/spf13/cobra"
-	"github.com/tal-tech/rigger/common"
 )
 
 var Fswatch = &cobra.Command{

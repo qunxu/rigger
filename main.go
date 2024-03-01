@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/qunxu/rigger/cmd"
 	"github.com/spf13/cobra"
-	"github.com/tal-tech/rigger/cmd"
 )
 
 var version bool

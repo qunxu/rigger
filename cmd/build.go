@@ -6,8 +6,8 @@ import (
 	"os"
 	osexec "os/exec"
 
+	"github.com/qunxu/rigger/common"
 	"github.com/spf13/cobra"
-	"github.com/tal-tech/rigger/common"
 )
 
 var Build = &cobra.Command{

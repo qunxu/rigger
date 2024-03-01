@@ -7,7 +7,7 @@ import (
 	"go/parser"
 	"go/token"
 
-	"github.com/tal-tech/rigger/common"
+	"github.com/qunxu/rigger/common"
 )
 
 var (

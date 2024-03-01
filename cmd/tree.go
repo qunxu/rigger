@@ -6,8 +6,8 @@ import (
 	"os"
 	osexec "os/exec"
 
+	"github.com/qunxu/rigger/config"
 	"github.com/spf13/cobra"
-	"github.com/tal-tech/rigger/config"
 )
 
 var Tree = &cobra.Command{

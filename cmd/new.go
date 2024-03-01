@@ -8,9 +8,9 @@ import (
 	"runtime"
 	"strings"
 
+	"github.com/qunxu/rigger/common"
+	"github.com/qunxu/rigger/config"
 	"github.com/spf13/cobra"
-	"github.com/tal-tech/rigger/common"
-	"github.com/tal-tech/rigger/config"
 )
 
 var New = &cobra.Command{

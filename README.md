@@ -4,7 +4,7 @@ Very convenient scaffold components, support Gaea, Odin framework code generatio
 ### 安装
 
 ```shell
-go get github.com/tal-tech/rigger
+go get github.com/qunxu/rigger
 ```
 
 ### 命令介绍
